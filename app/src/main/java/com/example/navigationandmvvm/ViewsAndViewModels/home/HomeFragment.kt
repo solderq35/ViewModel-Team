@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.navigationandmvvm.ViewsAndViewModels.Page1.Page1View
+import com.example.navigationandmvvm.ViewsAndViewModels.Page2.Page2View
 import com.example.navigationandmvvm.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -35,10 +35,17 @@ class HomeFragment : Fragment() {
             textView.text = it
         }
 
+        val button2 = binding.button
+        button2.setOnClickListener {
+            // go to Page1View
+            val intent = Intent(activity, Page2View::class.java)
+            startActivity(intent)
+        }
+
         val button = binding.button
         button.setOnClickListener {
             // go to Page1View
-            val intent = Intent(activity, Page1View::class.java)
+            val intent = Intent(activity, Page2View::class.java)
             startActivity(intent)
         }
 
